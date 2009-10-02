@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<%
+  path_without_slash = request.path_info
+  path_without_slash.slice!(0)
+%>
+<title><%= "#{path_without_slash.capitalize} | " if request.path_info != ""%>Knight Irrigation</title>
+<% if path_without_slash == ''%><meta name="description" content="Knight Irrigation"/><% end %>
+
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body id="<% if path_without_slash == ''%>home<% else %>subject<%end%>">
+
+<div id="top"><div class="wrap">
+	
+        <ul id="menu">
+        <%
+        	[ "home", "about", "services", "gallery", "faq", "contact" ].each do |route| %>
+        	<%=nav_active(route, path_without_slash)%>
+        	<%end%>
+        </ul>
+<!-- end #menu -->
+  
+  <div class="phone">(281) 855-7424</div>
+  
+  <h1><a href="/"></a>Knight Irrigation and Lawn</h1>
+  
+
+
+<% if path_without_slash != ''%>		
+	<div class="wrap2"><div class="top"><div class="bottom"><div class="content">
+<% end %>
+<%= yield %>
+<% if path_without_slash != ''%>
+	</div></div></div></div><!-- end .wrap2 -->
+<% end %>
+
+</div></div><!-- end #top -->
+
+
+
+<div id="bottom"><div class="wrap">
+	<div class="about">
+    	<h2>About Us</h2>
+    	<p>Knight Irrigation and Lawn is a full-service irrigation and lawn maintenance company that specializes in the installation and repair of sprinkler systems. </p>
+        <a class="more" href="/about">Read More</a>
+    </div><!-- end .about -->
+    
+    <div class="gallery">
+     	<h2>Gallery</h2>
+    	<a href="#"><img border="0" src="#" /></a>
+        <a href="#"><img border="0" src="#" /></a>
+        <a class="R" href="#"><img border="0" src="#" /></a>
+        <a class="more" href="/gallery">View More</a>
+    </div><!-- end .gallery -->
+    
+    <div class="likeTo">
+    	<h2>Like to meet with us?</h2>
+        <div class="box"><div class="top"><div class="bottom">
+        	<p>Some text inviting users to call with phone number (281) 855-7424 and a link pointing to the contact page.</p>
+        </div></div></div><!-- end .box -->
+    </div><!-- end .likeTo -->
+    
+    <br class="clear" />
+    
+    <div class="hr"></div>
+    
+    <p class="copyright">Copyright &copy; 2009 Knight Irrigation and Lawn</p>
+    <p class="designer">l</p>
+    
+    <br class="clear" />
+</div></div><!-- end #bottom -->
+
+</body>
+</html>
