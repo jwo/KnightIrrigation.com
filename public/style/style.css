@@ -281,4 +281,20 @@ br.clear {
 		text-align: right;
 		margin: 0;
 		}	
-		
+	.bottom .content p, .bottom .content li{
+		font-size:1.5em;
+	}
+	.bottom .content h2{
+		font-size:2em;
+		padding-top:20px;
+	}
+	.bottom .content h3{
+		font-size:1.8em;
+		padding-top:20px;
+	}
+	.bottom .content  p.about-large{
+		font-size:2em;
+	}
+	.bottom .content h3 a, .likeTo a{
+		color:white;
+	}
