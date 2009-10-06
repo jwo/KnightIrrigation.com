@@ -3,6 +3,11 @@ require 'rubygems'
 require 'sinatra'
 require 'navigation_lib.rb'
 
+use Rack::Auth::Basic do |username, password|
+  [username, password] == ['admin', 'secret']
+end
+
+
 not_found do
  #figure out how to raise 404 error
 end
