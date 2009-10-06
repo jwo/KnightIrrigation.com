@@ -5,7 +5,7 @@ body {
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
 	color: #282e08;
-	font-size: 9pt;
+	/*font-size: 9pt;*/
 	background-image: url(../images/bg-bottom.gif);
 	background-repeat: repeat;
 	}
@@ -132,7 +132,7 @@ br.clear {
 		* html #menu a {
 			margin-left: 5px;
 			}
-			#menu a:hover {
+			#menu a:hover, #menu a.active {
 				color: #ffffff;
 				background-image: url(../images/carrot.gif);
 				background-repeat: no-repeat;
@@ -220,7 +220,7 @@ br.clear {
 				margin-right: 0;
 				}	
 			.gallery a.more {
-				width: 56px;
+				width: 75px;
 				height: auto;
 				border: none;
 				clear: both;
@@ -282,7 +282,7 @@ br.clear {
 		margin: 0;
 		}	
 	.bottom .content p, .bottom .content li{
-		font-size:1.5em;
+		font-size:1em;
 	}
 	.bottom .content h2{
 		font-size:2em;
@@ -290,11 +290,25 @@ br.clear {
 	}
 	.bottom .content h3{
 		font-size:1.8em;
-		padding-top:20px;
+		/*padding-top:20px;*/
 	}
 	.bottom .content  p.about-large{
-		font-size:2em;
+		font-size:1.2em;
 	}
 	.bottom .content h3 a, .likeTo a{
 		color:white;
+	}
+	
+	#faq dt {
+/*	color: #2763A5;*/
+	cursor: pointer;
+	margin: 8px 0;
+	padding: 0;
+	}
+	#faq dd {
+	border: 1px solid #BABAC0;
+	padding: 10px 10px 0 10px;
+	margin: 10px 0 20px 0;
+	background-color: #FFFFE1;
+	color:#000000;
 	}

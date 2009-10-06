@@ -6,10 +6,21 @@
   path_without_slash = request.path_info
   path_without_slash.slice!(0)
 %>
-<title><%= "#{path_without_slash.capitalize} | " if request.path_info != ""%>Knight Irrigation</title>
-<% if path_without_slash == ''%><meta name="description" content="Knight Irrigation"/><% end %>
+<title><%= "#{path_without_slash.capitalize} | " if request.path_info != ""%>Knight Irrigation<% if request.path_info == ''%>: Katy Irrigation Repair and Landscaping<% end %></title>
+<% if path_without_slash == ''%><meta name="description" content="Knight Irrigation and Lawn is a full-service irrigation and lawn maintence company that specializes in the installation and repair of sprinkler systems."/><% end %>
 
 <link href="style/style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/scripts/jquery-1.3.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style/jquery.lightbox-0.5.css" media="screen" /><script type="text/javascript" src="javascript/jquery.js"></script> 
+<script type="text/javascript" src="/scripts/jquery.lightbox-0.5.js"></script> 
+
+
+<script type="text/javascript">
+$(function() {
+	$('a.lightbox').lightBox();
+});
+</script>
+
 </head>
 
 
@@ -19,7 +30,7 @@
 	
         <ul id="menu">
         <%
-        	[ "home", "about", "services", "gallery", "faq", "contact" ].each do |route| %>
+        	[ "irrigation", "drainage", "landscape", "powerwash", "contact", "about" ].each do |route| %>
         	<%=nav_active(route, path_without_slash)%>
         	<%end%>
         </ul>
@@ -29,15 +40,16 @@
   
   <h1><a href="/"></a>Knight Irrigation and Lawn</h1>
 
-
-
+<%= yield %>
+<!-->
 <% if path_without_slash != ''%>		
 	<div class="wrap2"><div class="top"><div class="bottom"><div class="content">
 <% end %>
 <%= yield %>
 <% if path_without_slash != ''%>
-	</div></div></div></div><!-- end .wrap2 -->
+	</div></div></div></div>
 <% end %>
+-->
 
 </div></div><!-- end #top -->
 
@@ -52,10 +64,10 @@
     
     <div class="gallery">
      	<h2>Gallery</h2>
-    	<a href="#"><img border="0" src="#" /></a>
-        <a href="#"><img border="0" src="#" /></a>
-        <a class="R" href="#"><img border="0" src="#" /></a>
-        <a class="more" href="/gallery">View More</a>
+    	<a href="/images/gallery/landscaping.jpg" class="lightbox" title="Landscaping and Sprinkler Install"><img border="0" src="/images/gallery/landscaping_thumb.jpg"  /></a>
+        <a href="/images/gallery/sprinkler.jpg" class="lightbox" title="No trace of system install: Katy, TX"><img border="0" src="/images/gallery/sprinkler_thumb.jpg" class="lightbox" /></a>
+        <a href="/images/gallery/sprinkler-1.jpg" class="lightbox R" title="Landscaping and Sprinkler Install"><img border="0" src="/images/gallery/sprinkler-1_thumb.jpg" class="lightbox" /></a>
+        <!--><a class="more" href="/gallery">View More</a>-->
     </div><!-- end .gallery -->
     
     <div class="likeTo">
@@ -72,7 +84,7 @@
     <div class="hr"></div>
     
     <p class="copyright">Copyright &copy; 2009 Knight Irrigation and Lawn</p>
-    <p class="designer">l</p>
+    <p class="designer"></p>
     
     <br class="clear" />
 </div></div><!-- end #bottom -->
