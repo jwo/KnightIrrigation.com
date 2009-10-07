@@ -281,7 +281,7 @@ br.clear {
 		text-align: right;
 		margin: 0;
 		}	
-	.bottom .content p, .bottom .content li{
+	.bottom .content p, .bottom .content li, .bottom .content td{
 		font-size:1em;
 	}
 	.bottom .content h2{
@@ -298,6 +298,8 @@ br.clear {
 	.bottom .content h3 a, .likeTo a{
 		color:white;
 	}
+	
+	
 	
 	#faq dt {
 /*	color: #2763A5;*/
