@@ -271,7 +271,7 @@ br.clear {
 		}	
 	#bottom p.copyright {
 		text-align: left;
-		width: 300px;
+		width: 350px;
 		float: left;
 		margin: 0;
 		}	
@@ -304,6 +304,9 @@ br.clear {
 	cursor: pointer;
 	margin: 8px 0;
 	padding: 0;
+	}
+	#faq dt a {
+		color:#FFFFFF;
 	}
 	#faq dd {
 	border: 1px solid #BABAC0;
