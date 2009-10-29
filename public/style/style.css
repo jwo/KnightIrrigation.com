@@ -111,6 +111,7 @@ br.clear {
 		font-size: 10pt;
 		position: relative;
 		right: 17px;
+		padding-left:10px;
 		}	
 		#menu li {
 			padding: 0;
@@ -123,7 +124,7 @@ br.clear {
 			text-decoration: none;
 			padding-bottom: 7px;
 			float: left;
-			width: 55px;
+		/*	width: 75px;*/
 			height: 40px;
 			line-height: 40px;
 			vertical-align: middle;
@@ -206,6 +207,7 @@ br.clear {
 		float: left;
 		width: 324px;
 		}	
+		.gallerylong{width:600px;}
 		.gallery {}
 			.gallery a {
 				width: 90px;
@@ -220,7 +222,7 @@ br.clear {
 				margin-right: 0;
 				}	
 			.gallery a.more {
-				width: 75px;
+				width: 85px;
 				height: auto;
 				border: none;
 				clear: both;
