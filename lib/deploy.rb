@@ -30,9 +30,6 @@ namespace :deploy do
     run "touch #{deploy_to}/current/restart.txt"
   end
   
-  task :update, :roles => [:web, :app] do
-    deploy.restart
-  end
  
   # This will make sure that Capistrano doesn't try to run rake:migrate (this is not a Rails project!)
   task :cold do
@@ -40,3 +37,5 @@ namespace :deploy do
     deploy.start
   end
 end
+
+after  'deploy:update',    'deploy:restart'
