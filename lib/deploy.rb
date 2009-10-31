@@ -27,7 +27,11 @@ namespace :deploy do
   end
   
   task :restart, :roles => [:web, :app] do    
-    run "cd touch #{deploy_to}/current/restart.txt"
+    run "touch #{deploy_to}/current/restart.txt"
+  end
+  
+  task :update, :roles => [:web, :app] do
+    deploy.restart
   end
  
   # This will make sure that Capistrano doesn't try to run rake:migrate (this is not a Rails project!)
