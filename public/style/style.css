@@ -45,6 +45,9 @@ p {
 br.clear {
 	clear: both;
 	}
+	.wrap2{
+		color:#f2efe8;
+	}
 #top {
 	background-image: url(../images/bg.gif);
 	background-repeat: repeat-x;
@@ -52,7 +55,8 @@ br.clear {
 	height: 439px;
 	width: 100%;
 	border-bottom: solid #8f4c1a 1px;
-	color: #f2efe8;
+	/*color: #f2efe8;*/
+	color: #0101010;
 	}
 	#subject #top {
 		height: auto;
