@@ -6,7 +6,7 @@
   path_without_slash = request.path_info
   path_without_slash.slice!(0)
 %>
-<title><%= "#{path_without_slash.capitalize} | " if request.path_info != ""%>Knight Irrigation<% if request.path_info == ''%>: Houston Irrigation Repair and Landscaping<% end %></title>
+<title><%= "#{path_without_slash.gsub('-', ' ').split(/\s+/).each{ |word| word.capitalize! }.join(' ')} | " if request.path_info != ""%>Knight Irrigation<% if request.path_info == ''%>: Houston Irrigation Repair and Landscaping<% end %></title>
 <% if path_without_slash == ''%><meta name="description" content="Knight Irrigation and Lawn is a full-service irrigation and lawn maintence company that specializes in the installation and repair of sprinkler systems."/><% end %>
 
 <link href="style/style.css" rel="stylesheet" type="text/css" />
@@ -31,7 +31,7 @@ $(function() {
 	
         <ul id="menu">
         <%
-        	[ "home", "irrigation", "drainage", "landscaping", "powerwashing", "testimonials", "contact", "about" ].each do |route| %>
+        	[ "home", "irrigation", "drainage", "landscaping", "powerwashing", "sprinkler-repair", "testimonials", "contact", "about" ].each do |route| %>
         	<%=nav_active(route, path_without_slash)%>
         	<%end%>
         </ul>
@@ -51,8 +51,8 @@ $(function() {
 <div id="bottom"><div class="wrap">
 	<div class="about">
     	<h2>About Us</h2>
-    	<p>Knight Irrigation and Lawn is a full-service irrigation and lawn maintenance company that specializes in the installation and repair of sprinkler systems. </p>
-        <a class="more" href="/about">Read More</a>
+    	<p>Knight Irrigation and Lawn is a full-service irrigation and lawn maintenance company that specializes in the installation and <a href="/sprinkler-repair">repair of sprinkler systems</a>. </p>
+        <a href="/about">More About</a> | <a  href="http://www.facebook.com/pages/Houston-TX/Knight-Irrigation-Lawn/237295508600">On Facebook</a> | <a href="/testimonials">Testimonials</a>
     </div><!-- end .about -->
     
     <div class="gallery">
@@ -64,10 +64,11 @@ $(function() {
     </div><!-- end .gallery -->
     
     <div class="likeTo">
-    	<h2>Like to meet with us?</h2>
+    	<h2>Contact Us</h2>
         <div class="box"><div class="top"><div class="bottom">
         	<p>
-			To learn more about everything Knight Irrigation and Lawn has to offer, please <a href="/contact">contact us</a> at <br/>(281) 855-7424.
+	Phone: (281) 855-7424<br/>
+	<a href="mailto:Kynn.Knight@knightirrigation.com?subject=from%20knightirrigation.com">Kynn.Knight@knightirrigation.com</a>
 	</p>
         </div></div></div><!-- end .box -->
     </div><!-- end .likeTo -->
@@ -76,7 +77,7 @@ $(function() {
     
     <div class="hr"></div>
     
-    <p class="copyright">Copyright &copy; 2009 Knight Irrigation and Lawn</p>
+    <p class="copyright" style="width:400px">Copyright &copy; 2009-2010 Knight Irrigation and Lawn</p>
     <p class="designer"></p>
     
     <br class="clear" />
