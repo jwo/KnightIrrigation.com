@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require 'rubygems'
 require 'sinatra'
-require 'navigation_lib.rb'
+require './navigation_lib.rb'
 
 not_found do
  #figure out how to raise 404 error
