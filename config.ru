@@ -1,4 +1,4 @@
-require 'knightirrigation'
+require './knightirrigation'
 
 
 run Sinatra.application
