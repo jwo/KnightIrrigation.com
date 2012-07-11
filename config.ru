@@ -1,4 +1,3 @@
 require './knightirrigation'
 
-
-run Sinatra.application
+run App.new
