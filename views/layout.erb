@@ -6,21 +6,13 @@
   path_without_slash = request.path_info
   path_without_slash.slice!(0)
 %>
-<title><%= "#{path_without_slash.gsub('-', ' ').split(/\s+/).each{ |word| word.capitalize! }.join(' ')} | " if request.path_info != ""%>Knight Irrigation<% if request.path_info == ''%>: Houston Irrigation Repair and Landscaping<% end %></title>
-<% if path_without_slash == ''%><meta name="description" content="Knight Irrigation and Lawn is a full-service irrigation and lawn maintence company that specializes in the installation and repair of sprinkler systems."/><% end %>
+<title><%= "#{path_without_slash.gsub('-', ' ').split(/\s+/).each{ |word| word.capitalize! }.join(' ')} | " if request.path_info != ""%>Premierscape Services LLC<% if request.path_info == ''%>: Houston Irrigation Repair and Landscaping<% end %></title>
+<% if path_without_slash == ''%><meta name="description" content="Premiuerscape Services LLC and Lawn is a full-service irrigation and lawn maintence company that specializes in the installation and repair of sprinkler systems."/><% end %>
 
+<link href='http://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC' rel='stylesheet' type='text/css'>
 <link href="style/style.css" rel="stylesheet" type="text/css" />
-<script language="JavaScript" src="/scripts/jquery-1.3.1.min.js"></script>
+<script language="JavaScript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style/jquery.lightbox-0.5.css" media="screen" /> 
-<script type="text/javascript" src="/scripts/jquery.lightbox-0.5.js"></script> 
-
-
-<script type="text/javascript">
-$(function() {
-	$('a.lightbox').lightBox();
-	$('a.travelinggun').lightBox();
-});
-</script>
 
 </head>
 
@@ -39,7 +31,7 @@ $(function() {
   
   <div class="phone">(281) 855-7424</div>
   
-  <h1><a href="/"></a>Knight Irrigation and Lawn</h1>
+  <a href="/" class="branding"><h1>Premierscape Services, LLC</h1></a>
 
 <%= yield %>
 
@@ -51,7 +43,7 @@ $(function() {
 <div id="bottom"><div class="wrap">
 	<div class="about">
     	<h2>About Us</h2>
-    	<p>Knight Irrigation and Lawn is a full-service irrigation and lawn maintenance company that specializes in the installation and <a href="/sprinkler-repair">repair of sprinkler systems</a>. </p>
+    	<p>Premierscape Services, LLC is a full-service irrigation and lawn maintenance company that specializes in the installation and <a href="/sprinkler-repair">repair of sprinkler systems</a>. </p>
         <a href="/about">More About</a> | <a  href="http://www.facebook.com/pages/Houston-TX/Knight-Irrigation-Lawn/237295508600">On Facebook</a> | <a href="/testimonials">Testimonials</a>
     </div><!-- end .about -->
     
@@ -77,12 +69,20 @@ $(function() {
     
     <div class="hr"></div>
     
-    <p class="copyright" style="width:400px">Copyright &copy; 2009-2010 Knight Irrigation and Lawn</p>
+    <p class="copyright" style="width:400px">Copyright &copy; 2012 Premierscape Services, LLC</p>
     <p class="designer"></p>
     
     <br class="clear" />
 </div></div><!-- end #bottom -->
 
+<script type="text/javascript" src="/scripts/jquery.lightbox-0.5.js"></script> 
+
+<script type="text/javascript">
+$(function() {
+	$('a.lightbox').lightBox();
+	$('a.travelinggun').lightBox();
+});
+</script>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

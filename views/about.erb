@@ -2,11 +2,11 @@
 	<h3>From the Owner</h3>
 	<blockquote>I have been in the irrigation and landscaping industry since 1998. I pride myself in completing high quality work and helping to provide my customers with an outdoor space that they can be proud of for years to come. We install irrigation systems that ensure optimal performance based on the necessary application in which we will guarantee your lawn and landscape will be healthy and lush. We also provide quality customer service and will go out of our way to make sure every client is happy with the services we provide because that is the most important aspect of our job. I surround myself with a great, hardworking, staff that specializes in both irrigation and landscaping."
 	</blockquote>
-	<div style="float:right; padding-bottom:30px">Kynn Knight, Founder, Knight Irrigation and Lawn</div>
+	<div style="float:right; padding-bottom:30px">Kynn Knight, Founder, Premierscape Services, LLC</div>
 	<br class="clear" />
 
 
-<p >Knight Irrigation and Lawn is a full-service irrigation and lawn maintenance company that specializes in the installation and repair of sprinkler systems.</p>
+<p >Premierscape Services, LLC is a full-service irrigation and lawn maintenance company that specializes in the installation and repair of sprinkler systems.</p>
 
 <p >Owner and Founder, Kynn Knight, began working in the industry in 1998, and with over a decade of experience, he brings his knowledge, quality, and care to every client he works with.</p>
 
@@ -25,23 +25,24 @@
 
 	<script language="javascript">
 	$(document).ready(function() {
-	$('#faq').find('dd').hide().end().find('dt').click(function() {
-	var answer = $(this).next();
-	if (answer.is(':visible')) {
-	answer.slideUp();
-	} else {
-	answer.slideDown('slow');
-	}
-	});
-	});
+    $("#faq dd").hide();
+    $('#faq dt a').on('click', function(event) {
+      event.stopPropagation();
+      $("#faq dd").hide();
+      var $answer = $(this).parent().next();
+      console.log($answer);
+      $answer.slideDown('slow');
+      return false;
+    });
+  });
 	</script>
 
-	<a href="#" style="float:right; color:white" onclick="$('#faq').find('dd').slideDown('slow');">Expand All</a><br clear="all">
+	<a href="#" style="float:right; color:white" onclick="$('#faq dd').slideDown('slow'); return false;">Expand All</a><br clear="all">
   <dl id="faq">    
       <dt>
-      <a href="#">Does Knight Irrigation and Lawn employ licensed irrigators?</a>              
+      <a href="#">Does Premierscape Services, LLC employ licensed irrigators?</a>              
       </dt>
-          <dd>Yes, Knight Irrigation and Lawn has a licensed irrigator and backflow tester on staff TCEQ: <span style="color:blue">LI14691</span> and BPAT: <span style="color:blue">BP12428</span>.  
+          <dd>Yes, Premierscape Services, LLC has a licensed irrigator and backflow tester on staff TCEQ: <span style="color:blue">LI14691</span> and BPAT: <span style="color:blue">BP12428</span>.  
 	  </dd>
 
 
@@ -53,7 +54,7 @@
 
       <dt><a href="#">How does the estimate process work?</a>              
       </dt>
-      <dd>Knight Irrigation and Lawn provides free estimates on most jobs. If you are interested in an               estimate, all you have to do is call or email the office and one of our staff will walk you through               the process.  
+      <dd>Premierscape Services, LLC provides free estimates on most jobs. If you are interested in an               estimate, all you have to do is call or email the office and one of our staff will walk you through               the process.  
       </dd>
 
 
@@ -65,7 +66,7 @@
 
       <dt><a href="#">How long does it take to complete most jobs?</a>              
       </dt>
-      <dd>In most cases, Knight Irrigation and Lawn can complete the job in 1 day.  
+      <dd>In most cases, Premierscape Services, LLC can complete the job in 1 day.  
       </dd>
 
 
@@ -75,7 +76,7 @@
       </dd>
 
 
-      <dt><a href="#">What areas do Knight Irrigation and Lawn service?</a>              
+      <dt><a href="#">What areas do Premierscape Services, LLC service?</a>              
       </dt>
       <dd>We service all of Houston and the surrounding communities.  
       </dd>

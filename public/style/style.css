@@ -12,22 +12,26 @@ body {
 a {
 	color: #622607;
 	}	
+a.branding{
+  text-decoration: none !important ;
+}
 h1 {
+  font-family: 'IM Fell French Canon SC', serif;
 	clear: both;
 	margin: 0;
 	padding: 20px 0 0 0;
-	font-size: 11pt;
-	width: 423px;
-	height: 26px;
+	font-size: 28pt;
+  color: #2F370A;
 	overflow: hidden;
 	}	
-	h1 a {
+	/*h1 a {
 		background-image: url(../images/title.gif);
 		background-repeat: no-repeat;
 		width: 423px;
 		height: 26px;
 		display: block;
 		}		
+    */
 h2 {
 	color: #2f370a;
 	margin: 10px 0;
